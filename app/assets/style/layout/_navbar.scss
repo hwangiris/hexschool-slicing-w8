@@ -1,0 +1,30 @@
+.navbar {
+  img {
+    width: 85px;
+    @include media-breakpoint-up(lg) {
+      width: auto;
+      height: 40px;
+    }
+  }
+  input[type='search'] {
+    width: 288px;
+  }
+}
+
+.navbar-nav {
+  @include media-breakpoint-up(lg) {
+    height: 100%;
+  }
+}
+
+.navbar-collapse {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: $white;
+  @include media-breakpoint-up(lg) {
+    position: static;
+    background-color: transparent;
+  }
+}
