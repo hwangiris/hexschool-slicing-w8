@@ -6,14 +6,31 @@
       height: 40px;
     }
   }
+  form {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $light;
+    @include media-breakpoint-up(lg) {
+      position: static;
+    }
+  }
   input[type='search'] {
-    width: 288px;
+    width: 100%;
+    @include media-breakpoint-up(lg) {
+      width: 288px;
+    }
   }
 }
 
 .navbar-nav {
   @include media-breakpoint-up(lg) {
     height: 100%;
+  }
+  .nav-link {
+    font-weight: bold;
   }
 }
 

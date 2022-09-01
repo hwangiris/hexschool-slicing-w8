@@ -6,73 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%- title %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Squada+One&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
 
-  <body class="bg-light">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-      <div class="container align-items-lg-stretch gap-lg-48">
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+      <div class="container align-items-lg-stretch">
         <a class="navbar-brand my-md-32 me-auto" href="index.html">
           <img src="assets/images/logo.svg" alt="Art NFT">
         </a>
-        <button class="navbar-toggler border-0 ms-auto"
-          type="button" data-bs-toggle="collapse"
-          data-bs-target="#searchToggle"
-          aria-controls="searchToggle"
-          aria-expanded="false"
-          aria-label="Toggle search"
-        >
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-        <button class="navbar-toggler border-0"
-          type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <div class="d-md-block d-none border-start"></div>
-        <form class="collapse d-lg-flex py-32" id="searchToggle">
-          <input
-            class="form-control form-control-plaintext py-8 border-0"
-            type="search" placeholder="搜尋作品名稱、藝術家名稱"
-            aria-label="Search"
+        <div class="d-flex gap-lg-48">
+          <button class="navbar-toggler border-0 ms-auto"
+            type="button" data-bs-toggle="collapse"
+            data-bs-target="#searchToggle"
+            aria-controls="searchToggle"
+            aria-expanded="false"
+            aria-label="Toggle search"
           >
-          <button class="btn btn-link py-8 border-0" type="submit">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
-        </form>
-        <div class="d-md-block d-none border-start"></div>
-        <div class="collapse navbar-collapse flex-grow-0 px-lg-0 px-12" id="navbarSupportedContent">
-          <ul class="navbar-nav gap-lg-48 text-center">
-            <li class="nav-item d-lg-flex align-items-center">
-              <a class="nav-link" href="#">探索</a>
-            </li>
-            <li class="d-md-block d-none border-start"></li>
-            <li class="nav-item d-lg-flex align-items-center">
-              <a class="nav-link" href="#">市值</a>
-            </li>
-            <li class="d-md-block d-none border-start"></li>
-            <li class="nav-item d-lg-flex align-items-center">
-              <a class="nav-link d-lg-block d-none" href="#">
-                <i class="fa-solid fa-wallet"></i>
-              </a>
-              <a class="btn btn-primary d-lg-none w-100 mb-12 border" href="#">
-                連結錢包
-              </a>
-            </li>
-          </ul>
+          <button class="navbar-toggler border-0"
+            type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="d-md-block d-none border-start"></div>
+          <form class="collapse collapse-horizontal d-lg-block py-lg-32" id="searchToggle">
+            <div class="form-block d-flex align-items-center h-100">
+              <button
+                class="d-lg-none btn btn-link px-12 py-8 border-0"
+                type="button" data-bs-toggle="collapse"
+                data-bs-target="#searchToggle"
+                aria-controls="searchToggle"
+                aria-expanded="false"
+                aria-label="Toggle search"
+              >
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <input
+                class="form-control form-control-plaintext py-8 border-0"
+                type="search" placeholder="搜尋作品名稱、藝術家名稱"
+                aria-label="Search"
+              >
+              <button class="btn btn-link px-12 py-8 border-0" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </form>
+          <div class="d-md-block d-none border-start"></div>
+          <div class="collapse navbar-collapse flex-grow-0 px-lg-0 px-12" id="navbarSupportedContent">
+            <ul class="navbar-nav gap-lg-48 text-center">
+              <li class="nav-item d-lg-flex align-items-center">
+                <a class="nav-link" href="#">探索</a>
+              </li>
+              <li class="d-md-block d-none border-start"></li>
+              <li class="nav-item d-lg-flex align-items-center">
+                <a class="nav-link" href="#">市值</a>
+              </li>
+              <li class="d-md-block d-none border-start"></li>
+              <li class="nav-item d-lg-flex align-items-center">
+                <a class="nav-link d-lg-block d-none" href="#">
+                  <i class="fa-solid fa-wallet"></i>
+                </a>
+                <a class="btn btn-primary d-lg-none w-100 mb-12 border" href="#">
+                  連結錢包
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
 
-    <%- contents %>
+    <main>
+      <%- contents %>
+    </main>
 
-    <footer class="footer">
-      footer
+    <footer class="pb-24 border-top text-center">
+      <p class="mb-0">
+        © ART NFT. All Rights Reserved
+      </p>
     </footer>
 
     <script src="./assets/js/vendors.js"></script>
