@@ -489,7 +489,7 @@ $border-widths: (
 
 $border-style:                solid !default;
 $border-color:                $black !default;
-$border-color-translucent:    rgba($black, .175) !default;
+$border-color-translucent:    $black !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
@@ -530,7 +530,7 @@ $aspect-ratios: (
   "1x1": 100%,
   "4x3": calc(3 / 4 * 100%),
   "16x9": calc(9 / 16 * 100%),
-  "21x9": calc(9 / 21 * 100%)
+  "33x34": calc(34 / 33 * 100%)
 ) !default;
 // scss-docs-end aspect-ratios
 // stylelint-enable function-disallowed-list
@@ -590,8 +590,8 @@ $font-sizes: (
 $headings-margin-bottom:      $spacer * .5 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
-$headings-line-height:        1.2 !default;
+$headings-font-weight:        700 !default;
+$headings-line-height:        1.4583333333 !default;
 $headings-color:              null !default;
 // scss-docs-end headings-variables
 

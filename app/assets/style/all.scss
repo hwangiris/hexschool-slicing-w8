@@ -1,9 +1,13 @@
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "./helpers/variables";
-@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "./bootstrap/bootstrap";
 
 @import './layout/navbar';
 @import './layout/footer';
 
 @import './component/button';
+@import './component/ratios';
 
+.writing-vertical {
+  writing-mode: vertical-lr;
+}
