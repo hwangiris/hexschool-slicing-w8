@@ -2,11 +2,14 @@
 @import "./helpers/variables";
 @import "./bootstrap/bootstrap";
 
+@import './basic/font';
+
 @import './layout/navbar';
 @import './layout/footer';
 
 @import './component/button';
 @import './component/ratios';
+@import './component/cards';
 
 .writing-vertical {
   writing-mode: vertical-lr;

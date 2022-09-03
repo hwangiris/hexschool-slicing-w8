@@ -1,0 +1,44 @@
+.cards--rank {
+  .card-img-top {
+    .ratio::before {
+      position: relative;
+      opacity: 0;
+      background-color: $black;
+      z-index: 1;
+    }
+    .btn {
+      z-index: 2;
+    }
+  }
+  .card {
+    .btn-major {
+      opacity: 0;
+    }
+    &.card--main {
+      .card__rank {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        span {
+          width: 48px;
+          height: 48px;
+        }
+      }
+    }
+    &:hover {
+      .ratio::before {
+        opacity: 0.5;
+      }
+      .btn-major {
+        --bs-btn-color: #{$white};
+        --bs-btn-bg: #{$primary};
+        --bs-btn-border-color: #{$black};
+        opacity: 1;
+        &::before {
+          border-color: transparent transparent $black transparent;
+        }
+      }
+    }
+  }
+}
