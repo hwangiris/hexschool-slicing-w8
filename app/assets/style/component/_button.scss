@@ -1,7 +1,9 @@
 .btn-major {
   position: relative;
-  font-family: $font-family-monospace;
+  font-family: "Squada One", "Noto Sans TC", sans-serif;
   --bs-btn-border-color: #{$black};
+  --bs-btn-font-size: 1.125rem;
+  --bs-btn-line-height: 1;
   &::before {
     content: '';
     display: block;
@@ -15,11 +17,53 @@
     border-color: transparent transparent $primary transparent;
   }
   &:hover {
-    --bs-btn-hover-color: #{$black};
+    --bs-btn-hover-color: #{$white};
     --bs-btn-hover-bg: #{$primary};
     --bs-btn-hover-border-color: #{$black};
     &::before {
       border-color: transparent transparent $black transparent;
+    }
+  }
+}
+
+.check-buttons {
+  .btn {
+    --bs-btn-padding-x: 1rem;
+    --bs-btn-padding-y: 1rem;
+    --bs-btn-line-height: 1;
+    --bs-btn-hover-color: #{$black};
+    --bs-btn-hover-bg: #{$white};
+    --bs-btn-hover-border-color: #{$primary};
+
+    // 給 check 用
+    --bs-btn-active-color: #{$black};
+    --bs-btn-active-bg: #{$white};
+    --bs-btn-active-border-color: #{$primary};
+
+    &:hover {
+      --bs-btn-padding-x: calc(1rem - 1px);
+      --bs-btn-padding-y: calc(1rem - 1px);
+      --bs-btn-border-width: 2px;
+    }
+    img {
+      width: 1rem;
+    }
+  }
+  .btn-check {
+    + .btn {
+      .fa-check {
+        opacity: 0;
+      }
+    }
+    &:checked {
+      + .btn {
+        --bs-btn-padding-x: calc(1rem - 1px);
+        --bs-btn-padding-y: calc(1rem - 1px);
+        --bs-btn-border-width: 2px;
+        .fa-check {
+          opacity: 1;
+        }
+      }
     }
   }
 }

@@ -4,12 +4,24 @@
 
 @import './basic/font';
 
-@import './layout/navbar';
-@import './layout/footer';
+body {
+  padding-top: 52px;
+  @include media-breakpoint-up(lg) {
+    padding-top: 89px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-top: 105px;
+  }
+}
 
+@import './layout/navbar';
+
+@import './component/double-line';
+@import './component/title';
 @import './component/button';
 @import './component/ratios';
 @import './component/cards';
+@import './component/join-us';
 
 .writing-vertical {
   writing-mode: vertical-lr;

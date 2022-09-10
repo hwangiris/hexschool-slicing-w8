@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%- title %></title>
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Squada+One&family=Paytone+One&display=swap">
@@ -14,12 +15,16 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light border-bottom">
-      <div class="container align-items-lg-stretch">
-        <a class="navbar-brand my-md-32 me-auto" href="index.html">
+    <nav class="
+      navbar navbar-expand-lg fixed-top
+      navbar-light bg-light
+      fs-md-6 fs-5 border-bottom
+    ">
+      <div class="container-lg align-items-lg-stretch">
+        <a class="navbar-brand my-xl-32 my-md-24 me-auto" href="index.html">
           <img src="assets/images/logo.svg" alt="Art NFT">
         </a>
-        <div class="d-flex gap-lg-48">
+        <div class="d-flex gap-xl-48 gap-md-24">
           <button class="navbar-toggler border-0 ms-auto"
             type="button" data-bs-toggle="collapse"
             data-bs-target="#searchToggle"
@@ -38,8 +43,8 @@
           >
             <i class="fa-solid fa-bars"></i>
           </button>
-          <div class="d-md-block d-none border-start"></div>
-          <form class="collapse collapse-horizontal d-lg-block py-lg-32" id="searchToggle">
+          <div class="d-lg-block d-none border-start"></div>
+          <form class="collapse collapse-horizontal d-lg-block py-xl-32 py-24" id="searchToggle">
             <div class="form-block d-flex align-items-center h-100">
               <button
                 class="d-lg-none btn btn-link px-12 py-8 border-0"
@@ -61,24 +66,34 @@
               </button>
             </div>
           </form>
-          <div class="d-md-block d-none border-start"></div>
+          <div class="d-lg-block d-none border-start"></div>
           <div class="collapse navbar-collapse flex-grow-0 px-lg-0 px-12" id="navbarSupportedContent">
-            <ul class="navbar-nav gap-lg-48 text-center">
+            <ul class="navbar-nav gap-xl-48 gap-md-24 text-center">
               <li class="nav-item d-lg-flex align-items-center">
-                <a class="nav-link" href="#">探索</a>
+                <a class="nav-link" href="explore.html">探索</a>
+              </li>
+              <li class="border-start border-top"></li>
+              <li class="nav-item d-lg-flex align-items-center">
+                <a class="nav-link" href="rank.html">市值</a>
               </li>
               <li class="d-md-block d-none border-start"></li>
               <li class="nav-item d-lg-flex align-items-center">
-                <a class="nav-link" href="#">市值</a>
-              </li>
-              <li class="d-md-block d-none border-start"></li>
-              <li class="nav-item d-lg-flex align-items-center">
-                <a class="nav-link d-lg-block d-none" href="#">
+                <button
+                  type="button"
+                  class="nav-link d-lg-block d-none border-0"
+                  data-bs-toggle="modal"
+                  data-bs-target="#walletModal"
+                >
                   <i class="fa-solid fa-wallet"></i>
-                </a>
-                <a class="btn btn-primary d-lg-none w-100 mb-12 border" href="#">
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary d-lg-none w-100 mb-12 border"
+                  data-bs-toggle="modal"
+                  data-bs-target="#walletModal"
+                >
                   連結錢包
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -90,13 +105,100 @@
       <%- contents %>
     </main>
 
-    <footer class="pb-24 border-top text-center">
+    <footer class="double-top-line pb-24 border-top text-center">
       <p class="mb-0">
         © ART NFT. All Rights Reserved
       </p>
     </footer>
 
+    <div class="modal fade" id="walletModal" tabindex="-1" aria-labelledby="walletModalLabel" aria-hidden="true">
+      <div class="
+        modal-dialog modal-dialog-centered modal-dialog-scrollable
+        mx-md-auto my-md-8 m-0 h-md-auto h-100
+      ">
+        <div class="modal-content h-md-auto h-100">
+          <div class="modal-header justify-content-center border-bottom">
+            <div class="fs-4 modal-title w-100 position-relative text-center" id="walletModalLabel">
+              連結你的錢包
+              <button type="button" class="
+                btn-close d-md-none d-block
+                position-absolute top-50 end-0 translate-middle-y m-0
+              " data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="modal-body pt-24">
+            <div class="check-buttons row g-8">
+              <div class="col-md-6">
+                <input type="checkbox" class="btn-check" id="MetaMask" autocomplete="off">
+                <label class="
+                  btn btn-outline-dark d-flex align-items-center gap-16 font-monospace
+                " for="MetaMask">
+                  <img src="assets/images/logo/connect01.png" alt="MetaMask">
+                  MetaMask
+                  <i class="fa-solid fa-check text-primary ms-auto"></i>
+                </label>
+              </div>
+              <div class="col-md-6">
+                <input type="checkbox" class="btn-check" id="Coinbase Wallet" autocomplete="off">
+                <label class="
+                  btn btn-outline-dark d-flex align-items-center gap-16 font-monospace
+                " for="Coinbase Wallet">
+                  <img src="assets/images/logo/connect02.png" alt="Coinbase Wallet">
+                  Coinbase Wallet
+                  <i class="fa-solid fa-check text-primary ms-auto"></i>
+                </label>
+              </div>
+              <div class="col-md-6">
+                <input type="checkbox" class="btn-check" id="WalletConnect" autocomplete="off">
+                <label class="
+                  btn btn-outline-dark d-flex align-items-center gap-16 font-monospace
+                " for="WalletConnect">
+                  <img src="assets/images/logo/connect03.png" alt="WalletConnect">
+                  WalletConnect
+                  <i class="fa-solid fa-check text-primary ms-auto"></i>
+                </label>
+              </div>
+              <div class="col-md-6">
+                <input type="checkbox" class="btn-check" id="Phantom" autocomplete="off">
+                <label class="
+                  btn btn-outline-dark d-flex align-items-center gap-16 font-monospace
+                " for="Phantom">
+                  <img src="assets/images/logo/connect01.png" alt="Phantom">
+                  Phantom
+                  <i class="fa-solid fa-check text-primary ms-auto"></i>
+                </label>
+              </div>
+              <div class="col-md-6">
+                <input type="checkbox" class="btn-check" id="Glow" autocomplete="off">
+                <label class="
+                  btn btn-outline-dark d-flex align-items-center gap-16 font-monospace
+                " for="Glow">
+                  <img src="assets/images/logo/connect05.png" alt="Glow">
+                  Glow
+                  <i class="fa-solid fa-check text-primary ms-auto"></i>
+                </label>
+              </div>
+              <div class="col-md-6">
+                <input type="checkbox" class="btn-check" id="Fortmatic" autocomplete="off">
+                <label class="
+                  btn btn-outline-dark d-flex align-items-center gap-16 font-monospace
+                " for="Fortmatic">
+                  <img src="assets/images/logo/connect06.png" alt="Fortmatic">
+                  Fortmatic
+                  <i class="fa-solid fa-check text-primary ms-auto"></i>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-center py-md-24">
+            <button type="button" class="btn btn-primary fs-5 text-white w-md-auto w-100 border" data-bs-dismiss="modal">連結錢包</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="./assets/js/vendors.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
     <script src="./assets/js/all.js"></script>
   </body>
 
