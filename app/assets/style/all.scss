@@ -2,17 +2,8 @@
 @import "./helpers/variables";
 @import "./bootstrap/bootstrap";
 
+@import './basic/page';
 @import './basic/font';
-
-body {
-  padding-top: 52px;
-  @include media-breakpoint-up(lg) {
-    padding-top: 89px;
-  }
-  @include media-breakpoint-up(xl) {
-    padding-top: 105px;
-  }
-}
 
 @import './layout/navbar';
 
@@ -21,8 +12,11 @@ body {
 @import './component/button';
 @import './component/ratios';
 @import './component/cards';
+@import './component/list';
+@import './component/tabs';
+@import './component/swiper';
 @import './component/join-us';
 
-.writing-vertical {
-  writing-mode: vertical-lr;
-}
+@import './pages/series';
+@import './pages/rank';
+@import './pages/work';

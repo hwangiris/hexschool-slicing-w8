@@ -1,0 +1,18 @@
+.nav-tabs {
+  --bs-nav-link-padding-x: 1rem;
+  --bs-nav-link-padding-y: 1rem;
+  --bs-nav-link-color: #{$gray-600};
+  --bs-nav-link-disabled-color: #{$black};
+  --bs-nav-tabs-link-active-border-color: #{$black} #{$black} #{$body-bg};
+  @include media-breakpoint-up(lg) {
+    --bs-nav-link-padding-x: 3rem;
+  }
+}
+
+.tab-pane {
+  .pane-section {
+    @include media-breakpoint-up(md) {
+      margin-bottom: 88px !important;
+    }
+  }
+}

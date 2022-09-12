@@ -51,3 +51,20 @@
     --bs-btn-font-size: 1.125rem;
   }
 }
+
+.navbar-toggler {
+  &[aria-expanded="false"] {
+    .fa-close {
+      display: none;
+    }
+  }
+  &[aria-expanded="true"] {
+    .fa-bars {
+      display: none;
+    }
+  }
+  .fa-solid {
+    width: 1rem;
+    text-align: center;
+  }
+}

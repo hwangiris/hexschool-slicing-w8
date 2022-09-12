@@ -26,6 +26,19 @@
   }
 }
 
+button.toggle-arrow {
+  &[aria-expanded="false"] {
+    .fa-solid {
+      transform: rotate(0deg);
+    }
+  }
+  &[aria-expanded="true"] {
+    .fa-solid {
+      transform: rotate(180deg);
+    }
+  }
+}
+
 .check-buttons {
   .btn {
     --bs-btn-padding-x: 1rem;

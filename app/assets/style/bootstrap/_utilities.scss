@@ -464,7 +464,10 @@ $utilities: map-merge(
     "font-family": (
       property: font-family,
       class: font,
-      values: (monospace: var(--#{$prefix}font-monospace))
+      values: (
+        monospace: var(--#{$prefix}font-monospace),
+        squada: "Squada One",
+      )
     ),
     "font-size": (
       rfs: true,
@@ -651,8 +654,22 @@ $utilities: map-merge(
         visible: visible,
         invisible: hidden,
       )
-    )
+    ),
     // scss-docs-end utils-visibility
+    "z-index": (
+      property: z-index,
+      values: (
+        0: 0,
+        1: 1,
+      )
+    ),
+    "writing-mode": (
+      property: writing-mode,
+      class: writing,
+      values: (
+        vertical: vertical-lr,
+      )
+    )
   ),
   $utilities
 );

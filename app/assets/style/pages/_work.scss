@@ -1,0 +1,25 @@
+.work-page {
+  .list-group-item {
+    display: flex;
+    align-items: center;
+    --bs-list-group-item-padding-x: 0;
+    --bs-list-group-item-padding-y: .5rem;
+    --bs-list-group-border-color: #{$gray-100};
+  }
+  .table {
+    --bs-table-border-color: #{$gray-100};
+    > :not(caption) > * {
+      > * {
+        padding: .5rem;
+        @media screen and (min-width: 330px) {
+          padding: .5rem 1rem;
+        }
+      }
+      > th {
+        font-size: .75rem;
+        font-weight: normal;
+        background-color: $gray-100;
+      }
+    }
+  }
+}
