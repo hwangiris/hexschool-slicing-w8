@@ -11,10 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Squada+One&family=Paytone+One&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
 
-  <body>
+  <body class="explore-page">
     <nav class="
       navbar navbar-expand-lg fixed-top
       navbar-light bg-light
@@ -42,6 +43,7 @@
             aria-label="Toggle navigation"
           >
             <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-close"></i>
           </button>
           <div class="d-lg-block d-none border-start"></div>
           <form class="collapse collapse-horizontal d-lg-block py-xl-32 py-24" id="searchToggle">
@@ -102,9 +104,9 @@
     </nav>
 
     
-<main class="pt-md-32 pt-md-48 pt-24 pb-32">
-  <div class="container-md mt-md-8 mb-md-48 mb-8 pb-md-32">
-    <div class="row g-md-24 g-16 pb-32 mb-md-48 mb-8">
+<main class="pt-md-32 pb-32 pt-24">
+  <div class="container-md mt-md-8">
+    <div class="row g-md-24 g-16 pb-md-48 mb-md-32 pb-32 mb-8">
       <div class="col-md-9">
         <div class="row g-0 h-md-100">
           <div class="col-md-5 h-md-100">
@@ -172,9 +174,9 @@
         </button>
       </li>
     </ul>
-    <div class="tab-content py-32">
+    <div class="tab-content pt-32 pb-8">
       <div class="tab-pane fade show active" id="art-works-pane" role="tabpanel" aria-labelledby="art-works" tabindex="0">
-        <div class="pane-section border bg-white pt-md-48 pt-32 pb-md-0 pb-32 px-md-0 px-16 mb-md-88">
+        <div class="pane-section border bg-white pt-md-48 pt-32 pb-md-0 pb-32 px-md-0 px-16 mb-md-88 mb-16">
           <div class="row align-items-end justify-content-center">
             <div class="col-md-8">
               <h2 class="h3 mb-16">追求者送我的花</h2>
@@ -215,11 +217,11 @@
               </div>
             </div>
             <div class="col-md-2 text-md-end text-center mt-16">
-              <a href="#!" class="btn btn-major">MORE</a>
+              <a href="series.html" class="btn btn-major">MORE</a>
             </div>
           </div>
         </div>
-        <div class="pane-section border bg-white pt-md-48 pt-32 pb-md-0 pb-32 px-md-0 px-16 mb-md-88">
+        <div class="pane-section border bg-white pt-md-48 pt-32 pb-md-0 pb-32 px-md-0 px-16 mb-md-88 mb-16">
           <div class="row align-items-end justify-content-center">
             <div class="col-md-8">
               <h2 class="h3 mb-16">追求者送我的花</h2>
@@ -260,15 +262,159 @@
               </div>
             </div>
             <div class="col-md-2 text-md-end text-center mt-16">
-              <a href="#!" class="btn btn-major">MORE</a>
+              <a href="series.html" class="btn btn-major">MORE</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="tab-pane fade" id="collection-pane" role="tabpanel" aria-labelledby="collection" tabindex="0">...</div>
+      <div class="tab-pane fade" id="collection-pane" role="tabpanel" aria-labelledby="collection" tabindex="0">
+        <div class="cards--artwork row" data-masonry='{"percentPosition": true }'>
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="card mb-md-48 mb-16 bg-transparent border-bottom-md">
+              <div class="card-img-top position-relative bg-white p-xl-24 p-8">
+                <img src="assets/images/art09.jpg" alt="區塊戀-他的私生活" class="img-fluid">
+                <div class="card-img-hover d-flex flex-column position-absolute text-white bg-black p-xl-16 p-8">
+                  <div class="d-flex flex-column flex-fill border border-white p-xl-16 p-8">
+                    <div class="fs-lg-6 fs-7 mb-xl-16 mb-8">唯一想擁有的人</div>
+                    <div class="fs-lg-6 fs-7 lh-1 mb-xl-16 mb-8">
+                      <i class="fa-brands fa-ethereum"></i> 300
+                    </div>
+                    <div class="btn btn-major fs-5 lh-1 mt-auto ms-auto">MORE</div>
+                  </div>
+                </div>
+              </div>
+              <div class="fs-md-6 fs-7 fw-md-bold my-md-16 my-8">區塊戀-他的私生活</div>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="card mb-md-48 mb-16 bg-transparent border-bottom-md">
+              <div class="card-img-top position-relative bg-white p-xl-24 p-8">
+                <img src="assets/images/art10.jpg" alt="夏娃的醜聞" class="img-fluid">
+                <div class="card-img-hover d-flex flex-column position-absolute text-white bg-black p-xl-16 p-8">
+                  <div class="d-flex flex-column flex-fill border border-white p-xl-16 p-8">
+                    <div class="fs-lg-6 fs-7 mb-xl-16 mb-8">唯一想擁有的人，唯一不可以擁有的</div>
+                    <div class="fs-lg-6 fs-7 lh-1 mb-xl-16 mb-8">
+                      <i class="fa-brands fa-ethereum"></i> 300
+                    </div>
+                    <div class="btn btn-major fs-5 lh-1 mt-auto ms-auto">MORE</div>
+                  </div>
+                </div>
+              </div>
+              <div class="fs-md-6 fs-7 fw-md-bold my-md-16 my-8">區塊戀-夏娃的醜聞</div>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="card mb-md-48 mb-16 bg-transparent border-bottom-md">
+              <div class="card-img-top position-relative bg-white p-xl-24 p-8">
+                <img src="assets/images/art02.jpg" alt="藍色啤酒海" class="img-fluid">
+                <div class="card-img-hover d-flex flex-column position-absolute text-white bg-black p-xl-16 p-8">
+                  <div class="d-flex flex-column flex-fill border border-white p-xl-16 p-8">
+                    <div class="fs-lg-6 fs-7 mb-xl-16 mb-8">唯一想擁有的人</div>
+                    <div class="fs-lg-6 fs-7 lh-1 mb-xl-16 mb-8">
+                      <i class="fa-brands fa-ethereum"></i> 300
+                    </div>
+                    <div class="btn btn-major fs-5 lh-1 mt-auto ms-auto">MORE</div>
+                  </div>
+                </div>
+              </div>
+              <div class="fs-md-6 fs-7 fw-md-bold my-md-16 my-8">藍色啤酒海</div>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="card mb-md-48 mb-16 bg-transparent border-bottom-md">
+              <div class="card-img-top position-relative bg-white p-xl-24 p-8">
+                <img src="assets/images/art11.jpg" alt="沒有人愛我" class="img-fluid">
+                <div class="card-img-hover d-flex flex-column position-absolute text-white bg-black p-xl-16 p-8">
+                  <div class="d-flex flex-column flex-fill border border-white p-xl-16 p-8">
+                    <div class="fs-lg-6 fs-7 mb-xl-16 mb-8">唯一想擁有的人</div>
+                    <div class="fs-lg-6 fs-7 lh-1 mb-xl-16 mb-8">
+                      <i class="fa-brands fa-ethereum"></i> 300
+                    </div>
+                    <div class="btn btn-major fs-5 lh-1 mt-auto ms-auto">MORE</div>
+                  </div>
+                </div>
+              </div>
+              <div class="fs-md-6 fs-7 fw-md-bold my-md-16 my-8">沒有人愛我</div>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="card mb-md-48 mb-16 bg-transparent border-bottom-md">
+              <div class="card-img-top position-relative bg-white p-xl-24 p-8">
+                <img src="assets/images/art12.jpg" alt="不哭不哭眼淚是珍珠" class="img-fluid">
+                <div class="card-img-hover d-flex flex-column position-absolute text-white bg-black p-xl-16 p-8">
+                  <div class="d-flex flex-column flex-fill border border-white p-xl-16 p-8">
+                    <div class="fs-lg-6 fs-7 mb-xl-16 mb-8">唯一想擁有的人</div>
+                    <div class="fs-lg-6 fs-7 lh-1 mb-xl-16 mb-8">
+                      <i class="fa-brands fa-ethereum"></i> 300
+                    </div>
+                    <div class="btn btn-major fs-5 lh-1 mt-auto ms-auto">MORE</div>
+                  </div>
+                </div>
+              </div>
+              <div class="fs-md-6 fs-7 fw-md-bold my-md-16 my-8">不哭不哭眼淚是珍珠</div>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="card mb-md-48 mb-16 bg-transparent border-bottom-md">
+              <div class="card-img-top position-relative bg-white p-xl-24 p-8">
+                <img src="assets/images/art03.jpg" alt="十分鐘就到" class="img-fluid">
+                <div class="card-img-hover d-flex flex-column position-absolute text-white bg-black p-xl-16 p-8">
+                  <div class="d-flex flex-column flex-fill border border-white p-xl-16 p-8">
+                    <div class="fs-md-6 fs-7 lh-1 mb-md-16 mb-8">
+                      <i class="fa-brands fa-ethereum"></i> 300
+                    </div>
+                    <div class="btn btn-major fs-5 lh-1 mt-auto ms-auto">MORE</div>
+                  </div>
+                </div>
+              </div>
+              <div class="fs-md-6 fs-7 fw-md-bold my-md-16 my-8">十分鐘就到</div>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="card mb-md-48 mb-16 bg-transparent border-bottom-md">
+              <div class="card-img-top position-relative bg-white p-xl-24 p-8">
+                <img src="assets/images/art04.jpg" alt="我這樣有美嗎" class="img-fluid">
+                <div class="card-img-hover d-flex flex-column position-absolute text-white bg-black p-xl-16 p-8">
+                  <div class="d-flex flex-column flex-fill border border-white p-xl-16 p-8">
+                    <div class="fs-lg-6 fs-7 mb-xl-16 mb-8">唯一想擁有的人</div>
+                    <div class="fs-lg-6 fs-7 lh-1 mb-xl-16 mb-8">
+                      <i class="fa-brands fa-ethereum"></i> 300
+                    </div>
+                    <div class="btn btn-major fs-5 lh-1 mt-auto ms-auto">MORE</div>
+                  </div>
+                </div>
+              </div>
+              <div class="fs-md-6 fs-7 fw-md-bold my-md-16 my-8">我這樣有美嗎</div>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="card mb-md-48 mb-16 bg-transparent border-bottom-md">
+              <div class="card-img-top position-relative bg-white p-xl-24 p-8">
+                <img src="assets/images/art27.jpg" alt="我真的受傷了" class="img-fluid">
+                <div class="card-img-hover d-flex flex-column position-absolute text-white bg-black p-xl-16 p-8">
+                  <div class="d-flex flex-column flex-fill border border-white p-xl-16 p-8">
+                    <div class="fs-lg-6 fs-7 mb-xl-16 mb-8">唯一想擁有的人</div>
+                    <div class="fs-lg-6 fs-7 lh-1 mb-xl-16 mb-8">
+                      <i class="fa-brands fa-ethereum"></i> 300
+                    </div>
+                    <div class="btn btn-major fs-5 lh-1 mt-auto ms-auto">MORE</div>
+                  </div>
+                </div>
+              </div>
+              <div class="fs-md-6 fs-7 fw-md-bold my-md-16 my-8">我真的受傷了</div>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
-
   </div>
 </main>
 
@@ -366,6 +512,7 @@
     </div>
 
     <script src="./assets/js/vendors.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
     <script src="./assets/js/all.js"></script>
   </body>

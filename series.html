@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我家外面的鳥 - Michael - ART NFT</title>
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Squada+One&family=Paytone+One&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body class="series-page">
+    <nav class="
+      navbar navbar-expand-lg fixed-top
+      navbar-light bg-light
+      fs-md-6 fs-5 border-bottom
+    ">
+      <div class="container-lg align-items-lg-stretch">
+        <a class="navbar-brand my-xl-32 my-md-24 me-auto" href="index.html">
+          <img src="assets/images/logo.svg" alt="Art NFT">
+        </a>
+        <div class="d-flex gap-xl-48 gap-md-24">
+          <button class="navbar-toggler border-0 ms-auto"
+            type="button" data-bs-toggle="collapse"
+            data-bs-target="#searchToggle"
+            aria-controls="searchToggle"
+            aria-expanded="false"
+            aria-label="Toggle search"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button class="navbar-toggler border-0"
+            type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-close"></i>
+          </button>
+          <div class="d-lg-block d-none border-start"></div>
+          <form class="collapse collapse-horizontal d-lg-block py-xl-32 py-24" id="searchToggle">
+            <div class="form-block d-flex align-items-center h-100">
+              <button
+                class="d-lg-none btn btn-link px-12 py-8 border-0"
+                type="button" data-bs-toggle="collapse"
+                data-bs-target="#searchToggle"
+                aria-controls="searchToggle"
+                aria-expanded="false"
+                aria-label="Toggle search"
+              >
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <input
+                class="form-control form-control-plaintext py-8 border-0"
+                type="search" placeholder="搜尋作品名稱、藝術家名稱"
+                aria-label="Search"
+              >
+              <button class="btn btn-link px-12 py-8 border-0" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </form>
+          <div class="d-lg-block d-none border-start"></div>
+          <div class="collapse navbar-collapse flex-grow-0 px-lg-0 px-12" id="navbarSupportedContent">
+            <ul class="navbar-nav gap-xl-48 gap-md-24 text-center">
+              <li class="nav-item d-lg-flex align-items-center">
+                <a class="nav-link" href="explore.html">探索</a>
+              </li>
+              <li class="border-start border-top"></li>
+              <li class="nav-item d-lg-flex align-items-center">
+                <a class="nav-link" href="rank.html">市值</a>
+              </li>
+              <li class="d-md-block d-none border-start"></li>
+              <li class="nav-item d-lg-flex align-items-center">
+                <button
+                  type="button"
+                  class="nav-link d-lg-block d-none border-0"
+                  data-bs-toggle="modal"
+                  data-bs-target="#walletModal"
+                >
+                  <i class="fa-solid fa-wallet"></i>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary d-lg-none w-100 mb-12 border"
+                  data-bs-toggle="modal"
+                  data-bs-target="#walletModal"
+                >
+                  連結錢包
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    
+<main class="pt-md-40 pb-32 pt-24">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-3 col-lg-4 series-filter d-lg-block collapse pb-lg-0 pb-48" id="collapseFilter">
+        <div class="row">
+          <div class="d-lg-none d-flex justify-content-center position-relative py-16 border-bottom">
+            <div class="fs-4">篩選條件</div>
+            <button type="button"
+              class="btn btn-close position-absolute top-50 end-0 translate-middle-y me-12"
+              data-bs-toggle="collapse" href="#collapseFilter" role="button" aria-expanded="false" aria-controls="collapseFilter"></button>
+          </div>
+        </div>
+        <ul class="list-group border-lg-1 border-0 pb-lg-0 pb-24">
+          <li class="list-group-item">
+            <button
+              type="button" data-bs-toggle="collapse" data-bs-target="#collapseNet"
+              aria-expanded="true" aria-controls="collapseNet"
+              class="toggle-arrow btn btn-link d-flex align-items-center justify-content-between p-0 w-100"
+            >
+              <span class="fw-bold">網路</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="collapse show" id="collapseNet">
+              <div class="d-flex flex-column gap-8 pt-16">
+                <div class="d-flex align-items-center justify-content-between">
+                  <label class="form-check-label w-100" for="以太坊">以太坊</label>
+                  <input class="form-check-input me-1" type="checkbox" name="以太坊" id="以太坊">
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <label class="form-check-label w-100" for="BNB 智能鏈">BNB 智能鏈</label>
+                  <input class="form-check-input me-1" type="checkbox" checked name="BNB 智能鏈" id="BNB 智能鏈">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <button
+              type="button" data-bs-toggle="collapse" data-bs-target="#collapseStatus"
+              aria-expanded="true" aria-controls="collapseStatus"
+              class="toggle-arrow btn btn-link d-flex align-items-center justify-content-between p-0 w-100"
+            >
+              <span class="fw-bold">狀態</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="collapse show" id="collapseStatus">
+              <div class="d-flex flex-column gap-8 pt-16">
+                <div class="d-flex align-items-center justify-content-between">
+                  <label class="form-check-label w-100" for="僅展示">僅展示</label>
+                  <input class="form-check-input me-1" type="checkbox" name="僅展示" id="僅展示">
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <label class="form-check-label w-100" for="拍賣中">拍賣中</label>
+                  <input class="form-check-input me-1" checked type="checkbox" name="拍賣中" id="拍賣中">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <button
+              type="button" data-bs-toggle="collapse" data-bs-target="#collapsePrice"
+              aria-expanded="true" aria-controls="collapsePrice"
+              class="toggle-arrow btn btn-link d-flex align-items-center justify-content-between p-0 w-100"
+            >
+              <span class="fw-bold">價格</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="collapse show" id="collapsePrice">
+              <div class="d-flex align-items-center gap-8 pt-16">
+                <select class="form-select p-8" aria-label="Default select example">
+                  <option value="eht" selected>ETH</option>
+                  <option value="bnb">BNB</option>
+                </select>
+                <input type="text" class="form-control p-8" id="inputPriceMin">
+                －
+                <input type="text" class="form-control p-8" id="inputPriceMax">
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="text-gray fw-bold mb-24">屬性</div>
+            <div class="d-flex flex-column gap-24">
+              <div>
+                <button
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseVariety"
+                  aria-expanded="true" aria-controls="collapseVariety"
+                  class="toggle-arrow btn btn-link d-flex align-items-center justify-content-between p-0 w-100"
+                >
+                  <span class="fw-bold">品種</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="collapse show" id="collapseVariety">
+                  <div class="d-flex flex-column gap-8 pt-16">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="form-check-label w-100" for="八哥">八哥</label>
+                      <input class="form-check-input me-1" type="checkbox" name="八哥" id="八哥">
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="form-check-label w-100" for="虎皮鸚鵡">虎皮鸚鵡</label>
+                      <input class="form-check-input me-1" checked type="checkbox" name="虎皮鸚鵡" id="虎皮鸚鵡">
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="form-check-label w-100" for="太平鳥">太平鳥</label>
+                      <input class="form-check-input me-1" type="checkbox" name="太平鳥" id="太平鳥">
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="form-check-label w-100" for="畫眉鳥">畫眉鳥</label>
+                      <input class="form-check-input me-1" type="checkbox" name="畫眉鳥" id="畫眉鳥">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseAmount"
+                  aria-expanded="false" aria-controls="collapseAmount"
+                  class="toggle-arrow btn btn-link d-flex align-items-center justify-content-between p-0 w-100"
+                >
+                  <span class="fw-bold">鳥的數量</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="collapse" id="collapseAmount">
+                  <div class="d-flex flex-column gap-8 pt-16">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="form-check-label w-100" for="1-3 隻">1-3 隻</label>
+                      <input class="form-check-input me-1" type="checkbox" name="1-3 隻" id="1-3 隻">
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="form-check-label w-100" for="4-6 隻">4-6 隻</label>
+                      <input class="form-check-input me-1" checked type="checkbox" name="4-6 隻" id="4-6 隻">
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="form-check-label w-100" for="6 隻以上">6 隻以上</label>
+                      <input class="form-check-input me-1" type="checkbox" name="6 隻以上" id="6 隻以上">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseBlossom"
+                  aria-expanded="false" aria-controls="collapseBlossom"
+                  class="toggle-arrow btn btn-link d-flex align-items-center justify-content-between p-0 w-100"
+                >
+                  <span class="fw-bold">是否有花草</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="collapse" id="collapseBlossom">
+                  <div class="d-flex flex-column gap-8 pt-16">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="form-check-label w-100" for="是">是</label>
+                      <input class="form-check-input me-1" type="radio" name="是否有花草" id="是">
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="form-check-label w-100" for="否">否</label>
+                      <input class="form-check-input me-1" type="radio" name="是否有花草" id="否">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseColor"
+                  aria-expanded="false" aria-controls="collapseColor"
+                  class="toggle-arrow btn btn-link d-flex align-items-center justify-content-between p-0 w-100"
+                >
+                  <span class="fw-bold">鳥的顏色</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="collapse" id="collapseColor">
+                  <div class="d-flex flex-column gap-8 pt-16">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="form-check-label w-100" for="黑色">黑色</label>
+                      <input class="form-check-input me-1" type="checkbox" name="黑色" id="黑色">
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="form-check-label w-100" for="白色">白色</label>
+                      <input class="form-check-input me-1" type="checkbox" name="白色" id="白色">
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="form-check-label w-100" for="藍色">藍色</label>
+                      <input class="form-check-input me-1" type="checkbox" name="藍色" id="藍色">
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="form-check-label w-100" for="綠色">綠色</label>
+                      <input class="form-check-input me-1" type="checkbox" name="綠色" id="綠色">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="position-fixed bottom-0 start-0 w-100">
+          <div class="d-lg-none d-flex justify-content-center position-relative border-bottom">
+            <button
+              type="button" class="btn btn-primary fs-5 text-white w-100 py-12 border" data-bs-toggle="collapse"
+              href="#collapseFilter" role="button" aria-expanded="false" aria-controls="collapseFilter"
+            >確認</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-9 col-lg-8">
+        <div class="row align-items-end">
+          <div class="col-xl-7">
+            <div class="d-flex align-items-center gap-16">
+              <div class="ratio ratio-1x1" style="width: 2rem">
+                <img src="assets/images/artist01.jpg" class="rounded-circle" alt="Michael">
+              </div>
+              <span class="font-monospace">Michael</span>
+            </div>
+            <h1 class="fs-2 mb-8">我家外面的鳥</h1>
+            <p class="mb-0">
+              家門前每天都有不同的小鳥，大多數的小鳥都有特殊能力，特殊能力是什麼我就不說了，希望大家能從作品感受到小鳥的快樂。
+            </p>
+          </div>
+          <div class="col-xl-5 col-lg-8 mt-xl-0 mt-16">
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item px-8 py-16 text-center">
+                <div class="d-block fs-md-6 fs-7 mb-8">項目</div>
+                <div class="fs-md-3 fs-4 font-monospace lh-1">6.4 k</div>
+              </li>
+              <li class="list-group-item px-8 py-16 text-center">
+                <div class="d-block fs-md-6 fs-7 mb-8">擁有者</div>
+                <div class="fs-md-3 fs-4 font-monospace lh-1">2.5 k</div>
+              </li>
+              <li class="list-group-item px-8 py-16 text-center">
+                <div class="d-block fs-md-6 fs-7 mb-8">底價</div>
+                <div class="d-flex align-items-center justify-content-center">
+                  <i class="fa-brands fa-ethereum"></i>
+                  <span class="fs-md-3 fs-4 font-monospace lh-1">&nbsp;1.38 k</span>
+                </div>
+              </li>
+              <li class="list-group-item px-8 py-16 text-center">
+                <div class="d-block fs-md-6 fs-7 mb-8">總額</div>
+                <div class="fs-md-3 fs-4 font-monospace lh-1">2.8 k</div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-12 text-end py-32 my-8">
+            <div class="dropdown">
+              <button class="btn btn-outline-dark dropdown-toggle dropdown-series py-8 px-24" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                最新上架&nbsp;
+                <i class="fa-solid fa-sort"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">最新上架</a></li>
+                <li><a class="dropdown-item" href="#">價格高至低</a></li>
+                <li><a class="dropdown-item" href="#">價格低至高</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="cards--artwork row" data-masonry='{"percentPosition": true }'>
+              <div class="col-lg-4 col-6">
+                <div class="card mb-md-48 mb-16 bg-transparent border-bottom-md">
+                  <div class="card-img-top position-relative bg-white p-xl-24 p-8">
+                    <img src="assets/images/art20.jpg" alt="這兩隻也太像企鵝了吧" class="img-fluid">
+                    <div class="card-img-hover d-flex flex-column position-absolute text-white bg-black p-xl-16 p-8">
+                      <div class="d-flex flex-column flex-fill border border-white p-xl-16 p-8">
+                        <div class="fs-lg-6 fs-7 mb-xl-16 mb-8">唯一想擁有的人</div>
+                        <div class="fs-lg-6 fs-7 lh-1 mb-xl-16 mb-8">
+                          <i class="fa-brands fa-ethereum"></i> 300
+                        </div>
+                        <div class="btn btn-major fs-5 lh-1 mt-auto ms-auto">MORE</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fs-md-6 fs-7 fw-md-bold my-md-16 my-8">這兩隻也太像企鵝了吧</div>
+                  <a href="work.html" class="stretched-link"></a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-6">
+                <div class="card mb-md-48 mb-16 bg-transparent border-bottom-md">
+                  <div class="card-img-top position-relative bg-white p-xl-24 p-8">
+                    <img src="assets/images/art21.jpg" alt="兩情相悅" class="img-fluid">
+                    <div class="card-img-hover d-flex flex-column position-absolute text-white bg-black p-xl-16 p-8">
+                      <div class="d-flex flex-column flex-fill border border-white p-xl-16 p-8">
+                        <div class="fs-lg-6 fs-7 mb-xl-16 mb-8">3/14情人節外面剛好有兩隻鳥，也在過情人節。</div>
+                        <div class="fs-lg-6 fs-7 lh-1 mb-xl-16 mb-8">
+                          <i class="fa-brands fa-ethereum"></i> 300
+                        </div>
+                        <div class="btn btn-major fs-5 lh-1 mt-auto ms-auto">MORE</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fs-md-6 fs-7 fw-md-bold my-md-16 my-8">兩情相悅</div>
+                  <a href="work.html" class="stretched-link"></a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-6">
+                <div class="card mb-md-48 mb-16 bg-transparent border-bottom-md">
+                  <div class="card-img-top position-relative bg-white p-xl-24 p-8">
+                    <img src="assets/images/art22.jpg" alt="群聚的小鳥們" class="img-fluid">
+                    <div class="card-img-hover d-flex flex-column position-absolute text-white bg-black p-xl-16 p-8">
+                      <div class="d-flex flex-column flex-fill border border-white p-xl-16 p-8">
+                        <div class="fs-lg-6 fs-7 mb-xl-16 mb-8">唯一想擁有的人</div>
+                        <div class="fs-lg-6 fs-7 lh-1 mb-xl-16 mb-8">
+                          <i class="fa-brands fa-ethereum"></i> 300
+                        </div>
+                        <div class="btn btn-major fs-5 lh-1 mt-auto ms-auto">MORE</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fs-md-6 fs-7 fw-md-bold my-md-16 my-8">群聚的小鳥們</div>
+                  <a href="work.html" class="stretched-link"></a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-6">
+                <div class="card mb-md-48 mb-16 bg-transparent border-bottom-md">
+                  <div class="card-img-top position-relative bg-white p-xl-24 p-8">
+                    <img src="assets/images/art23.jpg" alt="與你分享的快樂勝過獨自擁有" class="img-fluid">
+                    <div class="card-img-hover d-flex flex-column position-absolute text-white bg-black p-xl-16 p-8">
+                      <div class="d-flex flex-column flex-fill border border-white p-xl-16 p-8">
+                        <div class="fs-lg-6 fs-7 mb-xl-16 mb-8">唯一想擁有的人</div>
+                        <div class="fs-lg-6 fs-7 lh-1 mb-xl-16 mb-8">
+                          <i class="fa-brands fa-ethereum"></i> 300
+                        </div>
+                        <div class="btn btn-major fs-5 lh-1 mt-auto ms-auto">MORE</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fs-md-6 fs-7 fw-md-bold my-md-16 my-8">與你分享的快樂勝過獨自擁有</div>
+                  <a href="work.html" class="stretched-link"></a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-6">
+                <div class="card mb-md-48 mb-16 bg-transparent border-bottom-md">
+                  <div class="card-img-top position-relative bg-white p-xl-24 p-8">
+                    <img src="assets/images/art24.jpg" alt="會唱metal的鳥" class="img-fluid">
+                    <div class="card-img-hover d-flex flex-column position-absolute text-white bg-black p-xl-16 p-8">
+                      <div class="d-flex flex-column flex-fill border border-white p-xl-16 p-8">
+                        <div class="fs-lg-6 fs-7 mb-xl-16 mb-8">唯一想擁有的人</div>
+                        <div class="fs-lg-6 fs-7 lh-1 mb-xl-16 mb-8">
+                          <i class="fa-brands fa-ethereum"></i> 300
+                        </div>
+                        <div class="btn btn-major fs-5 lh-1 mt-auto ms-auto">MORE</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fs-md-6 fs-7 fw-md-bold my-md-16 my-8">會唱metal的鳥</div>
+                  <a href="work.html" class="stretched-link"></a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-6">
+                <div class="card mb-md-48 mb-16 bg-transparent border-bottom-md">
+                  <div class="card-img-top position-relative bg-white p-xl-24 p-8">
+                    <img src="assets/images/art25.jpg" alt="一大一小兩個恰恰好" class="img-fluid">
+                    <div class="card-img-hover d-flex flex-column position-absolute text-white bg-black p-xl-16 p-8">
+                      <div class="d-flex flex-column flex-fill border border-white p-xl-16 p-8">
+                        <div class="fs-lg-6 fs-7 mb-xl-16 mb-8">3/14情人節外面剛好有兩隻鳥，也在過情人節。</div>
+                        <div class="fs-lg-6 fs-7 lh-1 mb-xl-16 mb-8">
+                          <i class="fa-brands fa-ethereum"></i> 300
+                        </div>
+                        <div class="btn btn-major fs-5 lh-1 mt-auto ms-auto">MORE</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fs-md-6 fs-7 fw-md-bold my-md-16 my-8">一大一小兩個恰恰好</div>
+                  <a href="work.html" class="stretched-link"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button"
+      class="btn btn-dark d-lg-none position-fixed start-50 bottom-0 translate-middle z-index-1"
+      data-bs-toggle="collapse" href="#collapseFilter" role="button" aria-expanded="false" aria-controls="collapseFilter"
+    >
+      篩選條件 <span class="font-monospace">2</span>
+    </button>
+  </div>
+</main>
+
+
+    <footer class="double-top-line pb-24 border-top text-center">
+      <p class="mb-0">
+        © ART NFT. All Rights Reserved
+      </p>
+    </footer>
+
+    <div class="modal fade" id="walletModal" tabindex="-1" aria-labelledby="walletModalLabel" aria-hidden="true">
+      <div class="
+        modal-dialog modal-dialog-centered modal-dialog-scrollable
+        mx-md-auto my-md-8 m-0 h-md-auto h-100
+      ">
+        <div class="modal-content h-md-auto h-100">
+          <div class="modal-header justify-content-center border-bottom">
+            <div class="fs-4 modal-title w-100 position-relative text-center" id="walletModalLabel">
+              連結你的錢包
+              <button type="button" class="
+                btn-close d-md-none d-block
+                position-absolute top-50 end-0 translate-middle-y m-0
+              " data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="modal-body pt-24">
+            <div class="check-buttons row g-8">
+              <div class="col-md-6">
+                <input type="checkbox" class="btn-check" id="MetaMask" autocomplete="off">
+                <label class="
+                  btn btn-outline-dark d-flex align-items-center gap-16 font-monospace
+                " for="MetaMask">
+                  <img src="assets/images/logo/connect01.png" alt="MetaMask">
+                  MetaMask
+                  <i class="fa-solid fa-check text-primary ms-auto"></i>
+                </label>
+              </div>
+              <div class="col-md-6">
+                <input type="checkbox" class="btn-check" id="Coinbase Wallet" autocomplete="off">
+                <label class="
+                  btn btn-outline-dark d-flex align-items-center gap-16 font-monospace
+                " for="Coinbase Wallet">
+                  <img src="assets/images/logo/connect02.png" alt="Coinbase Wallet">
+                  Coinbase Wallet
+                  <i class="fa-solid fa-check text-primary ms-auto"></i>
+                </label>
+              </div>
+              <div class="col-md-6">
+                <input type="checkbox" class="btn-check" id="WalletConnect" autocomplete="off">
+                <label class="
+                  btn btn-outline-dark d-flex align-items-center gap-16 font-monospace
+                " for="WalletConnect">
+                  <img src="assets/images/logo/connect03.png" alt="WalletConnect">
+                  WalletConnect
+                  <i class="fa-solid fa-check text-primary ms-auto"></i>
+                </label>
+              </div>
+              <div class="col-md-6">
+                <input type="checkbox" class="btn-check" id="Phantom" autocomplete="off">
+                <label class="
+                  btn btn-outline-dark d-flex align-items-center gap-16 font-monospace
+                " for="Phantom">
+                  <img src="assets/images/logo/connect01.png" alt="Phantom">
+                  Phantom
+                  <i class="fa-solid fa-check text-primary ms-auto"></i>
+                </label>
+              </div>
+              <div class="col-md-6">
+                <input type="checkbox" class="btn-check" id="Glow" autocomplete="off">
+                <label class="
+                  btn btn-outline-dark d-flex align-items-center gap-16 font-monospace
+                " for="Glow">
+                  <img src="assets/images/logo/connect05.png" alt="Glow">
+                  Glow
+                  <i class="fa-solid fa-check text-primary ms-auto"></i>
+                </label>
+              </div>
+              <div class="col-md-6">
+                <input type="checkbox" class="btn-check" id="Fortmatic" autocomplete="off">
+                <label class="
+                  btn btn-outline-dark d-flex align-items-center gap-16 font-monospace
+                " for="Fortmatic">
+                  <img src="assets/images/logo/connect06.png" alt="Fortmatic">
+                  Fortmatic
+                  <i class="fa-solid fa-check text-primary ms-auto"></i>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-center py-md-24">
+            <button type="button" class="btn btn-primary fs-5 text-white w-md-auto w-100 border" data-bs-dismiss="modal">連結錢包</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/vendors.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>
