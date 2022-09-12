@@ -19,7 +19,7 @@ $(function() {
   $('button.toggle-arrow + .collapse').on('hidden.bs.collapse', masonry);
   $(window).on('resize load', masonry);
   
-  var swiper = new Swiper('.swiper--artist', {
+  var swiperArtist = new Swiper('.swiper--artist', {
     slidesPerView: 1,
     centeredSlides: true,
     loop: true,
@@ -32,6 +32,24 @@ $(function() {
       1024: {
         slidesPerView: 3,
         spaceBetween: 0,
+      },
+    },
+  });
+
+  var swiperWork = new Swiper('.swiper--work', {
+    slidesPerView: 2,
+    loop: true,
+    spaceBetween: 24,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 4,
       },
     },
   });
